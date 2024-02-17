@@ -42,31 +42,6 @@ def get_partial_data_door():
         item['_id'] = str(item['_id'])
     return jsonify(data), 200
 
-@app.route('/api/data/Test', methods=['GET'])
-def get_partial_data_Test():
-    collection = db['Testlight']  
-    data = list(collection.find())
-    for item in data:
-        item['_id'] = str(item['_id'])
-    return jsonify(data), 200
-
-@app.route('/api/data/Tetemp', methods=['GET'])
-def get_partial_data_Tetemp():
-    collection = db['Tetemp']  
-    data = list(collection.find())
-    for item in data:
-        item['_id'] = str(item['_id'])
-    return jsonify(data), 200
-
-@app.route('/api/data/test', methods=['GET'])
-def get_partial_data_test():
-    collection = db['test']  
-    data = list(collection.find())
-    for item in data:
-        item['_id'] = str(item['_id'])
-    return jsonify(data), 200
-
-
 
 #health check
 @app.route('/health', methods=['GET'])
